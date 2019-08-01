@@ -519,6 +519,11 @@ figure.effect-julia:hover p {
 
 /*gallery 🦄*/
 
+.galery__img {
+  max-width: 100%;
+  border-radius: 5px;
+}
+
 .more {
   margin-top: 40px;
 }
@@ -591,10 +596,12 @@ figure.effect-julia:hover p {
   text-align: center;
   text-transform: uppercase;
   color: #fff;
-  padding: 15px;
-  width: 100%;
+  padding: 15px 40px;
   border-radius: 25px;
   cursor: pointer;
+}
+.btn:hover {
+  color: #fff;
 }
 
 .form-items {

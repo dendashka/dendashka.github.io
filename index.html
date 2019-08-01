@@ -22,6 +22,8 @@
     <link rel="stylesheet" href="css/main.css">
     <!--anim-css-->
     <link rel="stylesheet" href="css/animate.min.css">
+    <!-- foopicker -->
+    <link rel="stylesheet" href="css/foopicker.css">
 
     <!--jquery fotorama-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
@@ -36,8 +38,8 @@
     <!--navigation 🦄-->
     <div class="container">
         <nav class="navbar fixed-top navbar-expand-lg navbar-light text-center justify-content-between">
-            <a class="navbar-brand" href="#">
-            </a>
+            <!-- <a class="navbar-brand" href="#">
+            </a> -->
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -54,8 +56,8 @@
                         <a class="nav-link hvr-fade" href="#price">Стоимость</a>
                     </li>
                     <li class="nav-item">
-                            <a class="nav-link hvr-fade" href="#order_inf">Нам доверяют</a>
-                        </li>
+                        <a class="nav-link hvr-fade" href="#order_inf">Нам доверяют</a>
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link hvr-fade" href="#gallery">Галерея</a>
                     </li>
@@ -414,7 +416,7 @@
     </section>
 
     <!--gallery 🦄-->
-    <section id="gallery">
+    <!-- <section id="gallery">
         <div class="container-fluid text-center">
             <div class="title_main">
                 <h1>Галерея</h1>
@@ -438,6 +440,66 @@
                 <hr>
             </div>
         </div>
+    </section> -->
+
+    <section id="gallery">
+        <div class="container-fluid text-center">
+            <div class="title_main">
+                <h1>Галерея</h1>
+            </div>
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-md-6 col-lg-4">
+                        <a class="d-block mb-4" data-fancybox="images"
+                            href="https://source.unsplash.com/lSXpV8bDeMA/1536x2304" data-width="1536"
+                            data-height="2304">
+                            <img class="img-fluid galery__img" src="img/1welcom-bg.jpg">
+                        </a>
+                        <a class="d-block mb-4" data-fancybox="images"
+                            href="https://source.unsplash.com/ty4X72BSsXY/1279x853" data-width="1279" data-height="853">
+                            <img class="img-fluid galery__img" src="img/J9RFAJ.jpg">
+                        </a>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <a class="d-block mb-4" data-fancybox="images"
+                            href="https://source.unsplash.com/lSXpV8bDeMA/1536x2304" data-width="1536"
+                            data-height="2304">
+                            <img class="img-fluid galery__img" src="img/galery-2.jpg">
+                        </a>
+                        <a class="d-block mb-4" data-fancybox="images"
+                            href="https://source.unsplash.com/ty4X72BSsXY/1279x853" data-width="1279" data-height="853">
+                            <img class="img-fluid galery__img" src="img/DSC_0169-1000x662.jpg">
+                        </a>
+                        <a class="d-block mb-4" data-fancybox="images"
+                            href="https://source.unsplash.com/ty4X72BSsXY/1279x853" data-width="1279" data-height="853">
+                            <img class="img-fluid galery__img" src="img/jeltab.jpg">
+                        </a>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4 d-none d-lg-block">
+                        <a class="d-block mb-4" data-fancybox="images"
+                            href="https://source.unsplash.com/ty4X72BSsXY/1279x853" data-width="1279" data-height="853">
+                            <img class="img-fluid galery__img" src="img/jelpr.jpg">
+                        </a>
+                        <a class="d-block mb-4" data-fancybox="images"
+                            href="https://source.unsplash.com/ty4X72BSsXY/1279x853" data-width="1279" data-height="853">
+                            <img class="img-fluid galery__img" src="img/4.jpg">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="more">
+                <hr>
+                <h3>
+                    Хочешь увидеть больше фотографий?
+                    <br>
+                    Загляни в наш <a href="https://instagram.com">Инстаграм🦄</a>
+                </h3>
+                <hr>
+            </div>
+        </div>
     </section>
 
     <!--contacts 🦄-->
@@ -449,9 +511,9 @@
                         <div class="title">
                             <h5>Забронируй свободную дату!</h5>
                         </div>
-                        <div class="form">
+                        <form class="form" method="POST" action="">
                             <div class="form-items">
-                                <input type="text" class="input" placeholder="Ваше имя">
+                                <input type="text" class="input" data-required placeholder="Ваше имя">
                                 <i class="fas fa-user"></i>
                             </div>
                             <div class="form-items">
@@ -459,29 +521,28 @@
                                 <i class="fas fa-phone"></i>
                             </div>
                             <div class="form-items">
-                                <textarea class="input message" cols="30" rows="10"
-                                    placeholder="Удобная дата..."></textarea>
+                                <input type="text" id="datepicker" class="input" placeholder="Удобная дата...">
                                 <i class="fas fa-calendar-check"></i>
                             </div>
+                            <button type="submit" class="btn btn-warning">Отправить</button>
+
+                        </form>
+                    </div>
+                    <div class="social-icons">
+                        <div class="vk hvr-grow">
+                            <button class="vk-but"></button>
                         </div>
-                        <div class="btn">
-                            <button type="button" class="btn btn-warning">Отправить</button>
+                        <div class="inst hvr-grow">
+                            <button class="inst-but"></button>
                         </div>
-                        <div class="social-icons">
-                            <div class="vk hvr-grow">
-                                <button class="vk-but"></button>
-                            </div>
-                            <div class="inst hvr-grow">
-                                <button class="inst-but"></button>
-                            </div>
-                            <div class="twiter hvr-grow">
-                                <button class="twit-but"></button>
-                            </div>
+                        <div class="twiter hvr-grow">
+                            <button class="twit-but"></button>
                         </div>
                     </div>
                 </div>
-
             </div>
+
+        </div>
         </div>
     </section>
 
@@ -512,10 +573,21 @@
 
     <!--wow-->
     <script src="js/wow.min.js"></script>
+
+    <!-- foopicker -->
+    <script src="js/foopicker.js"></script>
+
     <script>
         new WOW().init();
+        var foopicker = new FooPicker({
+
+            id: 'datepicker'
+
+        });
+
     </script>
     <!---->
+
 
 </body>
 
