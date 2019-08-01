@@ -7,7 +7,7 @@ $(document).ready(function() {
 		}
 		$.ajax({
 			type: "POST",
-			url: "mail.php",
+			url: "https://dendashka.github.io/mail.php",
 			data: $(this).serialize()
 		}).done(function() {
 			$('.js-overlay-thank-you').fadeIn();
