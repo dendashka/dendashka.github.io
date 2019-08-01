@@ -24,12 +24,9 @@
     <link rel="stylesheet" href="css/animate.min.css">
     <!-- foopicker -->
     <link rel="stylesheet" href="css/foopicker.css">
+    <!-- fancybox -->
+    <link rel="stylesheet" type="text/css" href="css/jquery.fancybox.min.css">
 
-    <!--jquery fotorama-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <!-- Get Fotorama from CDNJS, 19 KB -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
 
 </head>
 
@@ -451,41 +448,32 @@
                 <div class="row">
 
                     <div class="col-md-6 col-lg-4">
-                        <a class="d-block mb-4" data-fancybox="images"
-                            href="https://source.unsplash.com/lSXpV8bDeMA/1536x2304" data-width="1536"
-                            data-height="2304">
-                            <img class="img-fluid galery__img" src="img/1welcom-bg.jpg">
+                        <a class="img-container d-block mb-4" data-fancybox="images" href="img/1welcom-bg.jpg">
+                            <img class="img-fluid img-container__item" src="img/1welcom-bg.jpg">
                         </a>
-                        <a class="d-block mb-4" data-fancybox="images"
-                            href="https://source.unsplash.com/ty4X72BSsXY/1279x853" data-width="1279" data-height="853">
-                            <img class="img-fluid galery__img" src="img/J9RFAJ.jpg">
+                        <a class="img-container d-block mb-4" data-fancybox="images" href="img/J9RFAJ.jpg">
+                            <img class="img-fluid img-container__item" src="img/J9RFAJ.jpg">
                         </a>
                     </div>
 
                     <div class="col-md-6 col-lg-4">
-                        <a class="d-block mb-4" data-fancybox="images"
-                            href="https://source.unsplash.com/lSXpV8bDeMA/1536x2304" data-width="1536"
-                            data-height="2304">
-                            <img class="img-fluid galery__img" src="img/galery-2.jpg">
+                        <a class="img-container d-block mb-4" data-fancybox="images" href="img/galery-2.jpg">
+                            <img class="img-fluid img-container__item" src="img/galery-2.jpg">
                         </a>
-                        <a class="d-block mb-4" data-fancybox="images"
-                            href="https://source.unsplash.com/ty4X72BSsXY/1279x853" data-width="1279" data-height="853">
-                            <img class="img-fluid galery__img" src="img/DSC_0169-1000x662.jpg">
+                        <a class="img-container d-block mb-4" data-fancybox="images" href="img/DSC_0169-1000x662.jpg">
+                            <img class="img-fluid img-container__item" src="img/DSC_0169-1000x662.jpg">
                         </a>
-                        <a class="d-block mb-4" data-fancybox="images"
-                            href="https://source.unsplash.com/ty4X72BSsXY/1279x853" data-width="1279" data-height="853">
-                            <img class="img-fluid galery__img" src="img/jeltab.jpg">
+                        <a class="img-container d-block mb-4" data-fancybox="images" href="img/jeltab.jpg">
+                            <img class="img-fluid img-container__item" src="img/jeltab.jpg">
                         </a>
                     </div>
 
                     <div class="col-md-6 col-lg-4 d-none d-lg-block">
-                        <a class="d-block mb-4" data-fancybox="images"
-                            href="https://source.unsplash.com/ty4X72BSsXY/1279x853" data-width="1279" data-height="853">
-                            <img class="img-fluid galery__img" src="img/jelpr.jpg">
+                        <a class="img-container d-block mb-4" data-fancybox="images" href="img/jelpr.jpg">
+                            <img class="img-fluid img-container__item" src="img/jelpr.jpg">
                         </a>
-                        <a class="d-block mb-4" data-fancybox="images"
-                            href="https://source.unsplash.com/ty4X72BSsXY/1279x853" data-width="1279" data-height="853">
-                            <img class="img-fluid galery__img" src="img/4.jpg">
+                        <a class="img-container d-block mb-4" data-fancybox="images" href="img/4.jpg">
+                            <img class="img-fluid img-container__item" src="img/4.jpg">
                         </a>
                     </div>
                 </div>
@@ -511,17 +499,18 @@
                         <div class="title">
                             <h5>Забронируй свободную дату!</h5>
                         </div>
-                        <form class="form" method="POST" action="">
+                        <form class="form" id="form">
                             <div class="form-items">
-                                <input type="text" class="input" data-required placeholder="Ваше имя">
+                                <input type="text" class="input" name="name" placeholder="Ваше имя">
                                 <i class="fas fa-user"></i>
                             </div>
                             <div class="form-items">
-                                <input type="text" class="input" placeholder="Ваш номер">
+                                <input type="text" class="input" name="phone" placeholder="Ваш номер">
                                 <i class="fas fa-phone"></i>
                             </div>
                             <div class="form-items">
-                                <input type="text" id="datepicker" class="input" placeholder="Удобная дата...">
+                                <input type="text" id="datepicker" class="input" name="data"
+                                    placeholder="Удобная дата...">
                                 <i class="fas fa-calendar-check"></i>
                             </div>
                             <button type="submit" class="btn btn-warning">Отправить</button>
@@ -540,10 +529,16 @@
                     </div>
                 </div>
             </div>
-
         </div>
         </div>
     </section>
+
+    <div class="overlay js-overlay-thank-you">
+        <div class="popup js-thank-you">
+            <h2>Спасибо за заявку</h2>
+            <div class="close-popup js-close-thank-you"></div>
+        </div>
+    </div>
 
     <!-- Footer  🦄-->
     <footer id="footer">
@@ -569,6 +564,8 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
     <!---->
+    <!--jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     <!--wow-->
     <script src="js/wow.min.js"></script>
@@ -581,6 +578,13 @@
         });
     </script>
     <!---->
+
+    <!-- fancybox -->
+    <script src="js/jquery.fancybox.min.js"></script>
+
+    <!-- ajax form -->
+    <script src="js/main.js"></script>
+	<script src="js/jquery.maskedinput.js"></script>
 
 </body>
 
