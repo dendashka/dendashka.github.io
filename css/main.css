@@ -246,12 +246,6 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 10px;
 }
 
-.effect-julia:hover {
-  -webkit-box-shadow: -4px 3px 37px 3px #00000017;
-  -moz-box-shadow: -4px 3px 37px 3px #00000017;
-  box-shadow: -4px 3px 37px 3px #00000017;
-}
-
 .grid figure img {
   position: relative;
   display: block;
@@ -299,6 +293,13 @@ h1, h2, h3, h4, h5, h6 {
 
 figure.effect-julia {
   background-image: linear-gradient(to right top, #004d7a, #ff7d7d, #d5eb12);
+  transition: all 0.3s;
+}
+
+figure.effect-julia:hover {
+  -webkit-box-shadow: -4px 3px 37px 3px #00000017;
+  -moz-box-shadow: -4px 3px 37px 3px #00000017;
+  box-shadow: -4px 3px 37px 3px #00000017;
 }
 
 figure.effect-julia img {
