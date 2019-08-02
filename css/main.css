@@ -33,6 +33,7 @@ h1, h2, h3, h4, h5, h6 {
   padding: 10px 15px 10px 15px;
   color: #283644;
 }
+
 .title_main h2 {
   color: #283644;
 }
@@ -51,6 +52,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .navbar {
   background-color: #242c31ef;
+}
+
+.navbar-collapse {
+  transition: all 0.3s;
 }
 
 .navbar-toggler {
@@ -95,7 +100,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .wrap_main {
   height: 99vh;
-  background-image: url("../img/bg.jpg");
+  background-image: url("../img/bg1.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -103,23 +108,30 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
 }
 
+.main-bg__wrapper {
+  position: absolute;
+  width: 100%;
+  min-height: 100%;
+  background-color: #8b3c8b5d;
+}
+
 .wrap_1 {
-  float: right;
+  right: 0;
   height: 100%;
   width: 75%;
   border-radius: 100% 0% 27% 73% / 0% 100% 0% 100%;
   background: #421f1f85;
-  position: relative;
+  position: absolute;
 }
 
 .wrap_2 {
-  float: right;
+  right: 0;
   height: 100%;
   width: 85%;
   border-radius: 100% 0% 27% 73% / 0% 100% 0% 100%;
   background-image: linear-gradient(to right bottom, #1a30c4c5, #005fdec5, #0082e7c5, #00a1e5c5, #00bddfc5);
   margin: auto;
-  position: relative;
+  position: absolute;
 }
 
 .speech {
@@ -226,14 +238,18 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
   overflow: hidden;
   margin: 0 auto;
-  min-width: 320px;
-  max-width: 480px;
+  min-width: 310px;
+  max-width: 320px;
   max-height: 360px;
-  width: 48%;
-  height: auto;
   background: #3085a3;
   cursor: pointer;
   border-radius: 10px;
+}
+
+.effect-julia:hover {
+  -webkit-box-shadow: -4px 3px 37px 3px #00000017;
+  -moz-box-shadow: -4px 3px 37px 3px #00000017;
+  box-shadow: -4px 3px 37px 3px #00000017;
 }
 
 .grid figure img {
@@ -364,11 +380,10 @@ figure.effect-julia:hover p {
 
 .card {
   position: relative;
-  max-width: 325px;
-  height: auto;
+  max-width: 315px;
   border-radius: 15px;
   margin: 8px auto;
-  padding: 40px 20px;
+  padding: 20px 20px;
   -webkit-box-shadow: 0 10px 15px #0000001a;
   box-shadow: 0 10px 15px #0000001a;
   -webkit-transition: .5s;
@@ -378,6 +393,9 @@ figure.effect-julia:hover p {
 .card:hover {
   -webkit-transform: scale(1.1);
   transform: scale(1.03);
+  -webkit-box-shadow: -4px 3px 37px 3px #00000017;
+  -moz-box-shadow: -4px 3px 37px 3px #00000017;
+  box-shadow: -4px 3px 37px 3px #00000017;
 }
 
 .col-lg-4:nth-child(1) .card, .col-lg-4:nth-child(1) .card .title .fa {
@@ -435,7 +453,6 @@ figure.effect-julia:hover p {
   -webkit-transform: skewY(-5deg) scale(1.1);
   transform: skewY(-5deg) scale(1.1);
 }
-
 
 .title .far {
   border-radius: 50%;
@@ -525,9 +542,9 @@ figure.effect-julia:hover p {
 }
 
 .img-container__item:hover {
-  -webkit-box-shadow: -4px 3px 37px 3px #00000027;
--moz-box-shadow: -4px 3px 37px 3px #00000027;
-box-shadow: -4px 3px 37px 3px #00000027;
+  -webkit-box-shadow: -4px 3px 37px 3px #00000017;
+  -moz-box-shadow: -4px 3px 37px 3px #00000017;
+  box-shadow: -4px 3px 37px 3px #00000017;
 }
 
 .more {
@@ -550,7 +567,7 @@ box-shadow: -4px 3px 37px 3px #00000027;
 /*contacts 🦄*/
 
 #contacts {
-  background-image: url("../img/cont-bg.png");
+  background-image: url("../img/cont-bg.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -560,7 +577,7 @@ box-shadow: -4px 3px 37px 3px #00000027;
 .contact-us {
   text-align: center;
   width: 100%;
-  background-color: #ff334ed7;
+  background-color: #33d6ffd7;
   padding: 2rem 0;
   padding: 50px;
   margin: 50px auto;
@@ -569,6 +586,8 @@ box-shadow: -4px 3px 37px 3px #00000027;
 }
 
 .title h5 {
+  font-family: sans-serif;
+  font-weight: 700;
   color: #ffffff;
   letter-spacing: 1px;
   font-size: 25px;
@@ -605,7 +624,9 @@ box-shadow: -4px 3px 37px 3px #00000027;
   padding: 15px 40px;
   border-radius: 25px;
   cursor: pointer;
+  margin-top: 30px;
 }
+
 .btn:hover {
   color: #fff;
 }

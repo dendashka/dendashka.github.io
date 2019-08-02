@@ -14,7 +14,7 @@
     <!--fonts google-->
     <link href="https://fonts.googleapis.com/css?family=Russo+One" rel="stylesheet">
 
-    <!--fontawarsom-->
+    <!--fontawersome-->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
         integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 
@@ -72,12 +72,14 @@
         </nav>
 
     </div>
+
     <!--main page 🦄-->
     <section id="main_page">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-12 p-0">
                     <div class="wrap_main">
+                        <div class="main-bg__wrapper"></div>
                         <div class="wrap_1 wow slideInRight" data-wow-delay="0.2s" data-wow-duration="0.5s">
                             <div class="wrap_2 wow slideInRight" data-wow-delay="0.3s" data-wow-duration="0.7s">
                             </div>
@@ -413,32 +415,7 @@
     </section>
 
     <!--gallery 🦄-->
-    <!-- <section id="gallery">
-        <div class="container-fluid text-center">
-            <div class="title_main">
-                <h1>Галерея</h1>
-            </div>
-            <div class="container">
-                <div class="fotorama" data-allowfullscreen="true" data-nav="thumbs" data-loop="true"
-                    data-transition="crossfade">
-                    <img src="img/galery-2.jpg">
-                    <img src="img/11.jpg">
-                    <img src="img/4.jpg">
-                    <img src="img/1welcom-bg.jpg">
-                </div>
-            </div>
-            <div class="more">
-                <hr>
-                <h3>
-                    Хочешь увидеть больше фотографий?
-                    <br>
-                    Загляни в наш <a href="https://instagram.com">Инстаграм🦄</a>
-                </h3>
-                <hr>
-            </div>
-        </div>
-    </section> -->
-
+    
     <section id="gallery">
         <div class="container-fluid text-center">
             <div class="title_main">
@@ -509,23 +486,13 @@
                                 <i class="fas fa-phone"></i>
                             </div>
                             <div class="form-items">
-                                <input type="text" id="datepicker" class="input" name="data"
-                                    placeholder="Удобная дата...">
+                                <!-- <input type="text" id="datepicker" class="input" name="data"
+                                    placeholder="Удобная дата..."> -->
+                                    <input class="input" type="date" name="calendar">
                                 <i class="fas fa-calendar-check"></i>
                             </div>
                             <button type="submit" class="btn btn-warning">Отправить</button>
                         </form>
-                        <div class="social-icons">
-                            <div class="vk hvr-grow">
-                                <button class="vk-but"></button>
-                            </div>
-                            <div class="inst hvr-grow">
-                                <button class="inst-but"></button>
-                            </div>
-                            <div class="twiter hvr-grow">
-                                <button class="twit-but"></button>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -546,20 +513,15 @@
         </div>
     </footer>
 
-    <!--bootstrap
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>-->
+    <!--jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!--bootstrap-->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
     <!---->
-    <!--jquery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
+    
     <!--wow-->
     <script src="js/wow.min.js"></script>
     <!-- foopicker -->
@@ -575,8 +537,6 @@
     <!-- fancybox -->
     <script src="js/jquery.fancybox.min.js"></script>
 
-    <!-- ajax form -->
-	<script src="contactform.js"></script>
 
 </body>
 
