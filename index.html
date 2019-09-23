@@ -415,7 +415,7 @@
     </section>
 
     <!--gallery 🦄-->
-    
+
     <section id="gallery">
         <div class="container-fluid text-center">
             <div class="title_main">
@@ -476,22 +476,20 @@
                         <div class="title">
                             <h5>Забронируй свободную дату!</h5>
                         </div>
-                        <form class="form" id="form">
+                        <form class="form" action="https://formspree.io/d-dashkevich@mail.ru" method="POST">
                             <div class="form-items">
                                 <input type="text" class="input" name="name" placeholder="Ваше имя">
                                 <i class="fas fa-user"></i>
                             </div>
                             <div class="form-items">
-                                <input type="text" class="input" name="phone" placeholder="Ваш номер">
+                                <input type="text" class="input" id="phone" placeholder="Ваш номер">
                                 <i class="fas fa-phone"></i>
                             </div>
                             <div class="form-items">
-                                <!-- <input type="text" id="datepicker" class="input" name="data"
-                                    placeholder="Удобная дата..."> -->
-                                    <input class="input" type="date" name="calendar">
+                                <input class="input" type="date" name="calendar">
                                 <i class="fas fa-calendar-check"></i>
                             </div>
-                            <button type="submit" class="btn btn-warning">Отправить</button>
+                            <button type="submit" value="Send" class="btn btn-warning">Отправить</button>
                         </form>
                     </div>
                 </div>
@@ -521,7 +519,7 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
     <!---->
-    
+
     <!--wow-->
     <script src="js/wow.min.js"></script>
     <!-- foopicker -->
@@ -536,6 +534,9 @@
 
     <!-- fancybox -->
     <script src="js/jquery.fancybox.min.js"></script>
+
+    <script src="js/main.js"></script>
+    
 
 
 </body>
